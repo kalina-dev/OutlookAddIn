@@ -63,7 +63,7 @@ namespace OutlookAddIn
 
                 ClearFieldsAndClose();
 
-                string thePath = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "picture.png");
+                string thePath = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "picture2.bmp");
                 Outlook.Attachment oAttach = oMsg.Attachments.Add(thePath, iAttachType, iPosition, sDisplayName);
 
                 oMsg.Subject = subject;
@@ -79,7 +79,7 @@ namespace OutlookAddIn
             }//end of try block
             catch (Exception ex)
             {
-                MessageBox.Show("Ocorreu um erro " + ex.Message);
+                MessageBox.Show("Error occured " + ex.Message);
             }//end of catch
         }
 
@@ -99,7 +99,7 @@ namespace OutlookAddIn
         {
             PointF location = new PointF(30f, 30f);
 
-            string imageFilePath = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "picture.png");
+            string imageFilePath = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "picture.bmp");
             Bitmap bitmap = (Bitmap)Image.FromFile(imageFilePath);//load the image file
 
             using (Graphics graphics = Graphics.FromImage(bitmap))
@@ -120,7 +120,7 @@ namespace OutlookAddIn
                 }
             }
 
-            imageFilePath = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "picture.png");
+            imageFilePath = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "picture2.bmp");
             bitmap.Save(imageFilePath);//save the image file
         }
     }
