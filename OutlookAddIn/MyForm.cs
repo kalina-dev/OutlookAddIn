@@ -90,7 +90,6 @@ namespace OutlookAddIn
             subjectTextBox.Text = string.Empty;
             nameTextBox.Text = string.Empty;
             this.Close();
-            //sleep to make sure the e-mail is sent after the picture has been saved
             Thread.Sleep(3000);
         }
 

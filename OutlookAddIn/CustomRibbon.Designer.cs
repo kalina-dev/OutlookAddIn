@@ -36,7 +36,7 @@
         {
             this.tab = this.Factory.CreateRibbonTab();
             this.group = this.Factory.CreateRibbonGroup();
-            this.btnSendMessage = this.Factory.CreateRibbonButton();
+            this.BtnSendMessage = this.Factory.CreateRibbonButton();
             this.tab.SuspendLayout();
             this.group.SuspendLayout();
             this.SuspendLayout();
@@ -49,17 +49,17 @@
             // 
             // group
             // 
-            this.group.Items.Add(this.btnSendMessage);
+            this.group.Items.Add(this.BtnSendMessage);
             this.group.Name = "group";
             // 
-            // btnSendMessage
+            // BtnSendMessage
             // 
-            this.btnSendMessage.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.btnSendMessage.Image = global::OutlookAddIn.Properties.Resources.send_message;
-            this.btnSendMessage.Label = "Send message";
-            this.btnSendMessage.Name = "btnSendMessage";
-            this.btnSendMessage.ShowImage = true;
-            this.btnSendMessage.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.btnSendMessage_Click);
+            this.BtnSendMessage.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.BtnSendMessage.Image = global::OutlookAddIn.Properties.Resources.send_message;
+            this.BtnSendMessage.Label = "Send message";
+            this.BtnSendMessage.Name = "BtnSendMessage";
+            this.BtnSendMessage.ShowImage = true;
+            this.BtnSendMessage.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.BtnSendMessage_Click);
             // 
             // CustomRibbon
             // 
@@ -79,7 +79,7 @@
 
         internal Microsoft.Office.Tools.Ribbon.RibbonTab tab;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup group;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnSendMessage;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton BtnSendMessage;
     }
 
     partial class ThisRibbonCollection

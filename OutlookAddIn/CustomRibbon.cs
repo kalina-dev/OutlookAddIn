@@ -19,7 +19,7 @@ namespace OutlookAddIn
             myForm.ShowDialog();
         }
 
-        private void btnSendMessage_Click(object sender, RibbonControlEventArgs e)
+        private void BtnSendMessage_Click(object sender, RibbonControlEventArgs e)
         {
             ShowForm();
         }
