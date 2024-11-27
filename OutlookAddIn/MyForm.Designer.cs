@@ -62,7 +62,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(47, 91);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
+            this.label2.Name = "LblRecipient";
             this.label2.Size = new System.Drawing.Size(67, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Recipient:";
@@ -86,14 +86,15 @@
             // 
             // BtnSend
             // 
-            this.BtnSend.ForeColor = System.Drawing.Color.Coral;
+            this.BtnSend.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BtnSend.ForeColor = System.Drawing.Color.Indigo;
             this.BtnSend.Location = new System.Drawing.Point(373, 364);
             this.BtnSend.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSend.Name = "BtnSend";
             this.BtnSend.Size = new System.Drawing.Size(125, 40);
             this.BtnSend.TabIndex = 5;
             this.BtnSend.Text = "Send";
-            this.BtnSend.UseVisualStyleBackColor = true;
+            this.BtnSend.UseVisualStyleBackColor = false;
             this.BtnSend.Click += new System.EventHandler(this.BtnSend_Click);
             // 
             // label3
@@ -101,7 +102,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(47, 125);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
+            this.label3.Name = "LblSunject";
             this.label3.Size = new System.Drawing.Size(55, 16);
             this.label3.TabIndex = 6;
             this.label3.Text = "Subject:";
@@ -110,7 +111,7 @@
             // 
             this.subjectTextBox.Location = new System.Drawing.Point(242, 122);
             this.subjectTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.subjectTextBox.Name = "subjectTextBox";
+            this.subjectTextBox.Name = "SubjectTextBox";
             this.subjectTextBox.Size = new System.Drawing.Size(259, 22);
             this.subjectTextBox.TabIndex = 7;
             // 
@@ -127,6 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(568, 436);
             this.Controls.Add(this.Body);
             this.Controls.Add(this.subjectTextBox);
