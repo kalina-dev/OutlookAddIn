@@ -19,7 +19,7 @@ namespace OutlookAddIn
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnSend_Click(object sender, EventArgs e)
         {
             List<string> lineInfo = new List<string>();
             string[] words = messageTextBox.Text.Split(new char[0]);
@@ -49,7 +49,6 @@ namespace OutlookAddIn
         {
             try
             {
-                // Create a new mail item.
                 Outlook.MailItem oMsg = (Outlook.MailItem)oApp.CreateItem(Outlook.OlItemType.olMailItem);
                 oMsg.HTMLBody = stringBodyMessage;
                 String sDisplayName = "MyAttachment";
@@ -76,11 +75,11 @@ namespace OutlookAddIn
                 oMsg = null;
                 oApp = null;
 
-            }//end of try block
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Error occured " + ex.Message);
-            }//end of catch
+            }
         }
 
         private void ClearFieldsAndClose()
@@ -93,11 +92,9 @@ namespace OutlookAddIn
             Thread.Sleep(3000);
         }
 
-        //This is the step that will get the image, and write the content of the message within it
         private void PrepareMessage(List<string> body, string to)
         {
             PointF location = new PointF(30f, 30f);
-
             string imageFilePath = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "picture.bmp");
             Bitmap bitmap = (Bitmap)Image.FromFile(imageFilePath);//load the image file
 
@@ -120,7 +117,7 @@ namespace OutlookAddIn
             }
 
             imageFilePath = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "picture2.bmp");
-            bitmap.Save(imageFilePath);//save the image file
+            bitmap.Save(imageFilePath);//save the image file under a different name
         }
     }
 }

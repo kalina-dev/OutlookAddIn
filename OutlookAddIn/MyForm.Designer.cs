@@ -33,15 +33,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.mailTextBox = new System.Windows.Forms.TextBox();
             this.messageTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnSend = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.subjectTextBox = new System.Windows.Forms.TextBox();
+            this.Body = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nameTextBox
             // 
             this.nameTextBox.Location = new System.Drawing.Point(242, 49);
-            this.nameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(259, 22);
             this.nameTextBox.TabIndex = 0;
@@ -62,38 +63,38 @@
             this.label2.Location = new System.Drawing.Point(47, 91);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 20);
+            this.label2.Size = new System.Drawing.Size(67, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Recipient:";
             // 
             // mailTextBox
             // 
             this.mailTextBox.Location = new System.Drawing.Point(242, 85);
-            this.mailTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mailTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.mailTextBox.Name = "mailTextBox";
             this.mailTextBox.Size = new System.Drawing.Size(259, 22);
             this.mailTextBox.TabIndex = 3;
             // 
             // messageTextBox
             // 
-            this.messageTextBox.Location = new System.Drawing.Point(50, 160);
-            this.messageTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.messageTextBox.Location = new System.Drawing.Point(50, 213);
+            this.messageTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.messageTextBox.Multiline = true;
             this.messageTextBox.Name = "messageTextBox";
             this.messageTextBox.Size = new System.Drawing.Size(451, 135);
             this.messageTextBox.TabIndex = 4;
             // 
-            // button1
+            // BtnSend
             // 
-            this.button1.ForeColor = System.Drawing.Color.Coral;
-            this.button1.Location = new System.Drawing.Point(401, 364);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Send";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnSend.ForeColor = System.Drawing.Color.Coral;
+            this.BtnSend.Location = new System.Drawing.Point(373, 364);
+            this.BtnSend.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSend.Name = "BtnSend";
+            this.BtnSend.Size = new System.Drawing.Size(125, 40);
+            this.BtnSend.TabIndex = 5;
+            this.BtnSend.Text = "Send";
+            this.BtnSend.UseVisualStyleBackColor = true;
+            this.BtnSend.Click += new System.EventHandler(this.BtnSend_Click);
             // 
             // label3
             // 
@@ -108,25 +109,35 @@
             // subjectTextBox
             // 
             this.subjectTextBox.Location = new System.Drawing.Point(242, 122);
-            this.subjectTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.subjectTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.subjectTextBox.Name = "subjectTextBox";
             this.subjectTextBox.Size = new System.Drawing.Size(259, 22);
             this.subjectTextBox.TabIndex = 7;
+            // 
+            // Body
+            // 
+            this.Body.AutoSize = true;
+            this.Body.Location = new System.Drawing.Point(47, 187);
+            this.Body.Name = "Body";
+            this.Body.Size = new System.Drawing.Size(42, 16);
+            this.Body.TabIndex = 8;
+            this.Body.Text = "Body:";
             // 
             // MyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(568, 436);
+            this.Controls.Add(this.Body);
             this.Controls.Add(this.subjectTextBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnSend);
             this.Controls.Add(this.messageTextBox);
             this.Controls.Add(this.mailTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nameTextBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MyForm";
             this.Text = "Messenger";
             this.ResumeLayout(false);
@@ -141,8 +152,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox mailTextBox;
         private System.Windows.Forms.TextBox messageTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnSend;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox subjectTextBox;
+        private System.Windows.Forms.Label Body;
     }
 }
